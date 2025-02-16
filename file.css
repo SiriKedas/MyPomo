@@ -1,0 +1,258 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: url('Bg.webp') no-repeat center center fixed;
+    background-size: cover;
+    margin: 0;
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.navbar {
+    width: 100%;
+    background: url('Bg.webp') no-repeat center center fixed;
+    padding: 10px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 100;
+}
+
+.navbar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 20px;
+}
+
+.navbar ul li {
+    display: inline;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #5c5e5f;
+    transition: color 0.3s;
+    padding: 10px 15px;
+}
+
+.navbar ul li a:hover {
+    color: #000000;
+}
+
+
+h1 {
+    font-family: 'Poppins', sans-serif; /* Apply Google Font */
+    font-size: 2.5rem;
+    font-weight: 600; /* You can change it to 300, 400, or 600 */
+    margin-bottom: 20px;
+    color: rgb(0, 0, 0);
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+
+
+.folder-creator {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+    justify-content: center;
+}
+
+.folder-creator input {
+    padding: 10px;
+    width: 250px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.folder-creator button {
+    padding: 10px 15px;
+    border: none;
+    background: #007bff;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: 0.3s;
+}
+
+.folder-creator button:hover {
+    background: #0056b3;
+}
+
+/* Folders Grid Layout */
+#folders-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Makes it responsive */
+    gap: 20px;
+    width: 90%;
+    max-width: 1200px;
+}
+
+/* Individual Folder Styling */
+.folder {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 15px;
+    border-radius: 10px;
+    text-align: left;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s;
+    position: relative;
+}
+
+.folder:hover {
+    transform: scale(1.05);
+}
+
+/* Folder Header */
+.folder-title {
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.2rem;
+}
+
+/* Folder Content */
+.folder-content {
+    display: none;
+    padding-top: 10px;
+}
+
+/* Input for Links */
+.folder input[type="text"] {
+    padding: 8px;
+    width: 80%;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+/* Delete Folder Button */
+.folder .delete-folder {
+    background: rgb(250, 249, 249);
+    padding: 5px 10px;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    font-size: 0.8rem;
+    transition: 0.3s;
+}
+
+.folder .delete-folder:hover {
+    background: rgb(20, 20, 20);
+}
+
+/* Links List */
+.links {
+    list-style: none;
+    padding: 0;
+    margin-top: 10px;
+}
+
+.links li {
+    background: #f1f1f1;
+    padding: 8px;
+    margin: 5px 0;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+
+.links li a {
+    text-decoration: none;
+    color: #007bff;
+    flex: 1;
+    white-space: nowrap; /* Prevents wrapping */
+    overflow: hidden; /* Hides overflow text */
+    text-overflow: ellipsis; /* Adds '...' when text is too long */
+    max-width: 80%;
+}
+
+
+.links li a:hover {
+    text-decoration: underline;
+}
+
+/* Add Link Button */
+.add-link {
+    margin-top: 5px;
+    padding: 5px 10px;
+    font-size: 0.9rem;
+    background: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.add-link:hover {
+    background: #218838;
+}
+
+/* Feature to Change Folder Background */
+.folder .change-bg {
+    background: #ffc107;
+    padding: 5px 10px;
+    border-radius: 5px;
+    color: black;
+    font-size: 0.8rem;
+    cursor: pointer;
+    margin-top: 5px;
+    display: block;
+}
+
+.folder .change-bg:hover {
+    background: #e0a800;
+}
+
+/* Moving Stickers */
+.sticker {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    animation: float 4s infinite ease-in-out alternate;
+}
+
+@keyframes float {
+    0% { transform: translateY(0px); }
+    100% { transform: translateY(-20px); }
+}
+
+.sticker1 {
+    top: 3%;
+    left: 3%;
+}
+
+.sticker2 {
+    top: 3%;
+    right: 3%;
+}
+
+.sticker3 {
+    bottom: 3%;
+    left: 3%;
+}
+
+.sticker4 {
+    bottom: 3%;
+    right: 3%;
+}

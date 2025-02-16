@@ -1,0 +1,288 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@300;400;600&display=swap');
+
+:root {
+    --mypomo-color: #000;
+    --timer-color: #000;
+    --timer-heading-color: #000;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: url('Bg.webp') no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    overflow: auto;
+}
+
+
+.navbar {
+    width: 100%;
+    background: url('Bg.webp') no-repeat center center fixed;
+    padding: 10px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 100;
+}
+
+.navbar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 20px;
+}
+
+.navbar ul li {
+    display: inline;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #5c5e5f;
+    transition: color 0.3s;
+    padding: 10px 15px;
+}
+
+.navbar ul li a:hover {
+    color: #000000;
+}
+
+.container {
+    text-align: center;
+    width: 80%;
+    max-width: 900px;
+    padding: 20px;
+    margin-top: 60px;
+}
+
+.main-heading {
+    font-size: 5rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+    font-family: 'Pacifico', cursive;
+    color: var(--mypomo-color);
+}
+
+.content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.main {
+    flex: 2;
+    text-align: center;
+}
+
+.timer-heading {
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--timer-heading-color);
+}
+
+.timer {
+    font-size: 6rem;
+    margin: 20px 0;
+    font-weight: bold;
+    color: var(--timer-color);
+}
+
+button {
+    padding: 10px 15px;
+    font-size: 1rem;
+    margin: 5px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #007bff;
+    color: white;
+    transition: 0.3s;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.right-section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.sidebar, .quotes {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 15px;
+    margin-top: 20px;
+    width: 100%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 15px;
+}
+
+.countdown-container {
+    background: linear-gradient(to right, #f4f3f3, #fcfcfc);
+    padding: 20px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+#countdown-date {
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    margin: 10px 0;
+    font-size: 1rem;
+}
+
+#countdown-timer {
+    font-size: 2rem;
+    margin-top: 10px;
+}
+
+.countdown-container button {
+    background: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 10px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.countdown-container button:hover {
+    background: #0056b3;
+}
+
+
+#todo-input {
+    width: 80%;
+    padding: 12px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 25px;
+    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.1);
+    font-size: 1rem;
+    outline: none;
+}
+
+#todo-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 10px;
+}
+
+#todo-list li {
+    background: linear-gradient(to right, #000000, #000000);
+    padding: 12px;
+    margin: 8px 0;
+    border-radius: 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 600;
+    color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+}
+
+#todo-list li:hover {
+    transform: scale(1.05);
+}
+
+#todo-list li input[type="checkbox"] {
+    margin-right: 10px;
+    transform: scale(1.5);
+    cursor: pointer;
+}
+
+#todo-list li button {
+    background: #000000;
+    color: white;
+    border: none;
+    padding: 4px 8px;
+    cursor: pointer;
+    border-radius: 15px;
+    font-weight: bold;
+    font-size: 0.8rem;
+    transition: 0.3s;
+}
+
+#todo-list li button:hover {
+    background: #383838;
+}
+
+.quotes {
+    margin-top: 20px;  
+    padding: 1px;  
+    background: #f4f4f4;
+    border-radius: 10px;  
+    text-align: center;
+    font-style: italic;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); 
+    border: 1px solid #ddd; /* Add thin border */
+    margin-left: -40px;
+}
+
+.quotes h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.quotes p {
+    font-size: 16px;
+    color: #555;
+}
+
+
+/* Moving Stickers */
+.sticker {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    animation: float 4s infinite ease-in-out alternate;
+}
+
+@keyframes float {
+    0% { transform: translateY(0px); }
+    100% { transform: translateY(-20px); }
+}
+
+.sticker1 {
+    top: 10%;
+    left: 3%;
+}
+
+.sticker2 {
+    top: 10%;
+    right: 3%;
+}
+
+.sticker3 {
+    bottom: 10%;
+    left: 3%;
+}
+
+.sticker4 {
+    bottom: 10%;
+    right: 3%;
+}
+
+
+
+

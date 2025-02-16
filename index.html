@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyPomo</title>
+    <link rel="stylesheet" href="MP.css">
+    <link rel="icon" href="icon.png" type="image/png">
+    <link rel="shortcut icon" href="icon.png" type="image/png">
+
+</head>
+<body>
+    <nav class="navbar">
+        <ul>
+            <li><a href="index.html"> 🏠 Home</a></li>
+            <li><a href="file.html">📂 Resources</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <h1 class="main-heading">MyPomo</h1>
+    
+        <div class="content">
+            
+            <div class="main">
+                <h2 class="timer-heading"> ⏰ Pomodoro Timer</h2>
+                <label for="time-input">Set Time (minutes): </label>
+                <input type="number" id="time-input" min="1" value="25">
+                <div class="timer" id="timer">25:00</div>
+                <button id="start-btn">▶️ </button>
+                <button id="pause-btn">⏸️ </button>
+                <button id="reset-btn">🔄 </button>
+                <button id="break-btn">☕ </button>
+    
+                
+                <div class="quotes">
+                    <h2>💡Motivational Quote</h2>
+                    <p id="quote"></p>
+                </div>
+            </div>
+    
+            
+            <div class="right-section">
+                <div class="sidebar">
+                    <h2>📝 To-Do List</h2>
+                    <input type="text" id="todo-input" placeholder="Add a task...">
+                    <button id="add-todo">Add</button>
+                    <ul id="todo-list"></ul>
+                </div>
+    
+                
+                <div class="countdown-container">
+                    <h2>🎯Countdown Timer</h2>
+                    <input type="date" id="countdown-date">
+                    <button>⏳ Start Countdown</button>
+                    <div id="countdown-timer"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+    
+    <img src="1.png" class="sticker sticker1">
+    <img src="2.png" class="sticker sticker2">
+    <img src="3.png" class="sticker sticker3">
+    <img src="4.png" class="sticker sticker4">
+
+    <script src="MP.js"></script>
+</body>
+</html>
+
+
