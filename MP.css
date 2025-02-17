@@ -121,17 +121,29 @@ button:hover {
     align-items: center;
 }
 
-.sidebar, .quotes {
+.sidebar {
     background: rgba(255, 255, 255, 0.9);
+    opacity: 0.7;
+    padding: 15px;
+    margin-top: 20px;
+    width: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 15px;
+}
+.quotes {
+    background: rgba(255, 255, 255, 0.9);
+    opacity: 0.7;
     padding: 15px;
     margin-top: 20px;
     width: 100%;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     border-radius: 15px;
+
 }
 
 .countdown-container {
     background: linear-gradient(to right, #f4f3f3, #fcfcfc);
+    opacity: 0.7;
     padding: 20px;
     border-radius: 15px;
     text-align: center;
@@ -281,6 +293,121 @@ button:hover {
 .sticker4 {
     bottom: 10%;
     right: 3%;
+}
+
+/* General styles for smaller screens */
+@media (max-width: 1200px) {
+    .container {
+        width: 90%;
+    }
+
+    .navbar ul li a {
+        font-size: 1rem;  /* Reduce font size for smaller screens */
+    }
+
+    .main-heading {
+        font-size: 4rem;  /* Smaller heading on smaller screens */
+    }
+
+    .quotes, .sidebar {
+        width: 90%;  /* Adjust width for side sections */
+    }
+
+    .right-section {
+        flex: 1;
+        padding: 20px;
+    }
+}
+
+/* For tablets and medium screens (up to 768px) */
+@media (max-width: 768px) {
+    .container {
+        width: 100%;
+        padding: 15px;
+    }
+
+    .main-heading {
+        font-size: 3rem;  /* Even smaller heading */
+    }
+
+    .navbar ul li a {
+        font-size: 0.9rem;
+        padding: 8px 12px;
+    }
+
+    .quotes, .sidebar {
+        width: 100%;  /* Full width for smaller devices */
+        margin-top: 15px;
+    }
+
+    .content {
+        flex-direction: column; /* Stack content vertically */
+        align-items: center;
+    }
+
+    .main {
+        flex: none; /* Center main content */
+    }
+
+    .right-section {
+        flex: none;
+        width: 100%;
+        margin-top: 20px;
+    }
+}
+
+/* For mobile devices (up to 480px) */
+@media (max-width: 480px) {
+    .navbar ul li a {
+        font-size: 0.8rem;  /* Further reduce font size */
+        padding: 5px 10px;
+    }
+
+    .main-heading {
+        font-size: 2.5rem;  /* Further reduce heading size */
+    }
+
+    .quotes, .sidebar {
+        padding: 10px;
+        width: 100%;
+    }
+
+    .timer {
+        font-size: 5rem;  /* Adjust timer size for mobile */
+    }
+
+    .button {
+        font-size: 0.9rem;
+    }
+
+    .countdown-container {
+        font-size: 1.5rem; /* Reduce font size */
+        padding: 15px;
+    }
+
+    .sticker {
+        width: 120px;
+        height: 120px;
+    }
+
+    /* Make the todo list full width */
+    #todo-input {
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .sticker {
+        width: 12vw; /* Smaller stickers for medium screens */
+        height: 12vw; /* Keep aspect ratio the same */
+    }
+}
+
+@media (max-width: 480px) {
+    .sticker {
+        width: 10vw; /* Even smaller stickers for mobile */
+        height: 10vw; /* Keep aspect ratio the same */
+    }
 }
 
 

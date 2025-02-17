@@ -48,7 +48,7 @@ body {
 }
 
 .navbar ul li a:hover {
-    color: #000000;
+    color: #ffffff;
 }
 
 
@@ -57,7 +57,7 @@ h1 {
     font-size: 2.5rem;
     font-weight: 600; /* You can change it to 300, 400, or 600 */
     margin-bottom: 20px;
-    color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
 }
 
@@ -96,7 +96,7 @@ h1 {
 /* Folders Grid Layout */
 #folders-container {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Makes it responsive */
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Adjusts based on space */
     gap: 20px;
     width: 90%;
     max-width: 1200px;
@@ -255,4 +255,34 @@ h1 {
 .sticker4 {
     bottom: 3%;
     right: 3%;
+}
+
+@media (max-width: 768px) {
+    .sticker {
+        width: 12vw; /* Smaller stickers for medium screens */
+        height: 12vw; /* Keep aspect ratio the same */
+    }
+}
+
+@media (max-width: 480px) {
+    .sticker {
+        width: 10vw; /* Even smaller stickers for mobile */
+        height: 10vw; /* Keep aspect ratio the same */
+    }
+}
+
+@media (max-width: 600px) {
+    .navbar ul {
+        flex-direction: column; /* Stack links on small screens */
+        align-items: center;
+    }
+}
+.folder {
+    width: 100%; /* Takes full width of the grid */
+    max-width: 300px; /* Prevents it from getting too big */
+}
+@media (max-width: 600px) {
+    #folders-container {
+        grid-template-columns: 1fr; /* Stack folders in a single column */
+    }
 }
